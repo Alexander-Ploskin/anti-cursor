@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "anti-cursor"
+version = "1.0.2"
+description = "A CLI utility to generate prompts from project source code."
+authors = ["Alexander-Ploskin <ploskin0107@gmail.com>"]
+readme = "README.md"
+
+packages = [
+    { include = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+click = "^8.1.8"
+pyperclip = "^1.9.0"
+gitignore-parser = "^0.1.11"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+
+[tool.poetry.scripts]
+anti-cursor = "src.cli:main"
+
+[build-system]
+requires = ["poetry-core>=1.0"]
+build-backend = "poetry.core.masonry.api"
